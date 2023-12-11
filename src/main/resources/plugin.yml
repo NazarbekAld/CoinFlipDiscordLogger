@@ -1,0 +1,4 @@
+name: ExamplePlugin
+version: '1.0'
+main: org.xexe.example.ExamplePlugin
+api-version: '1.20'
