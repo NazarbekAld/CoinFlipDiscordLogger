@@ -33,6 +33,10 @@ class WebhookTest {
                 return null
             }
 
+            override fun loser(): OfflinePlayer? {
+                return null
+            }
+
             override fun isEnded(): Boolean {
                 return false
             }
@@ -57,6 +61,10 @@ class WebhookTest {
 
             override fun winner(): OfflinePlayer? {
                 return p2
+            }
+
+            override fun loser(): OfflinePlayer? {
+                return p
             }
 
             override fun isEnded(): Boolean {

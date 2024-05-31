@@ -24,7 +24,7 @@ object CoinFlipLogWebHook {
     var coinFlipEnd: Function<CoinFlipSession, WebhookEmbed> = Function {
         return@Function WebhookEmbedBuilder()
             .setTitle(WebhookEmbed.EmbedTitle("${it.participator()?.name} and ${it.founder().name} started the coin flip.", null))
-            .setDescription("The winner is ${it.winner()?.name} and won ${it.amount().round(MathContext(4, RoundingMode.CEILING))}${it.currency()}!")
+            .setDescription("The winner is ${it.winner()?.name} and won ${it.amount().round(MathContext(4, RoundingMode.CEILING))}${it.currency()}!\nThe loser is: ${it.loser()?.name}")
             .build()
     }
 

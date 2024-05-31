@@ -23,6 +23,16 @@ class DeluxeCoinFlipSession(val adapt: CoinflipGame, var participator: OfflinePl
         return winner
     }
 
+    override fun loser(): OfflinePlayer? {
+        val win = winner ?: return null
+        val part = participator ?: return null
+
+        if (win.uniqueId == part.uniqueId) {
+            return founder()
+        }
+        return part
+    }
+
     override fun isEnded(): Boolean {
         return winner != null
     }

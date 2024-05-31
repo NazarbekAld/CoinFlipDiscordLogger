@@ -35,6 +35,10 @@ class CoinFlipListener: Listener {
                 return e.winner
             }
 
+            override fun loser(): OfflinePlayer? {
+                return e.loser
+            }
+
             override fun isEnded(): Boolean {
                 return true
             }

@@ -10,5 +10,6 @@ interface CoinFlipSession {
 
     fun participator(): OfflinePlayer?
     fun winner(): OfflinePlayer?
+    fun loser(): OfflinePlayer?
     fun isEnded(): Boolean
 }
