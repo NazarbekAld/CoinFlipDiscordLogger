@@ -7,7 +7,7 @@ import kotlin.test.Test
 
 class WebhookTest {
 
-    //@Test
+    @Test
     fun test() {
         val server = MockBukkit.mock()
         val p = server.addPlayer("Kliner")

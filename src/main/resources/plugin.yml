@@ -2,3 +2,5 @@ name: CoinFlipLog
 version: '1.0'
 main: me.nazarxexe.coinfliplogger.CoinFlipLog
 api-version: '1.19'
+depend:
+  - "DeluxeCoinflip"

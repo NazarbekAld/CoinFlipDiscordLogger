@@ -24,7 +24,7 @@ class CoinFlipListener: Listener {
             }
 
             override fun currency(): String {
-                return "(Money)" // Let's just assume its money because plugin doesn't provide any even clone of the session. And no way to get what exactly player won.
+                return "$" // Let's just assume its money because plugin doesn't provide any even clone of the session. And no way to get what exactly player won.
             }
 
             override fun participator(): OfflinePlayer? {
@@ -40,9 +40,11 @@ class CoinFlipListener: Listener {
             }
         })
     }
-    @EventHandler(priority = EventPriority.HIGH)
-    fun onCreated(e: CoinflipCreatedEvent) {
-        if (e.isCancelled) return
-        CoinFlipLogWebHook.handle(DeluxeCoinFlipSession(e.coinflipGame))
-    }
+
+    // TODO: Owner only needs win messages.
+//    @EventHandler(priority = EventPriority.HIGH)
+//    fun onCreated(e: CoinflipCreatedEvent) {
+//        if (e.isCancelled) return
+//        CoinFlipLogWebHook.handle(DeluxeCoinFlipSession(e.coinflipGame))
+//    }
 }
